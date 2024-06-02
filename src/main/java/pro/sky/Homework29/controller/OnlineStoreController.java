@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 import pro.sky.Homework29.model.OnlineStore;
 import pro.sky.Homework29.service.OnlineStoreService;
 
-import java.util.Collection;
 import java.util.List;
 
 @RestController
@@ -20,12 +19,12 @@ public class OnlineStoreController {
     }
 
     @GetMapping("/add")
-    public List<Integer> addId(@RequestParam List<Integer>ID) {
+    public List<Integer> addId(@RequestParam List<Integer> ID) {
         return onlineStoreService.addId(ID);
     }
 
     @GetMapping("/get")
-    public Collection<OnlineStore> getId() {
+    public List<OnlineStore> getId() {
         return onlineStoreService.getId();
     }
 

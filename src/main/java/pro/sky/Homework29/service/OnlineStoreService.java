@@ -6,7 +6,6 @@ import pro.sky.Homework29.exception.OnlineStoreException;
 import pro.sky.Homework29.model.OnlineStore;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -17,7 +16,7 @@ public class OnlineStoreService {
     List<OnlineStore> list = new ArrayList<>();
 
     public List<Integer> addId(List<Integer> ID) {
-        if(ID.isEmpty()) {
+        if (ID.isEmpty()) {
             throw new OnlineStoreException();
         }
         for (Integer arg : ID) {
@@ -26,7 +25,7 @@ public class OnlineStoreService {
         return ID;
     }
 
-    public Collection<OnlineStore> getId() {
+    public List<OnlineStore> getId() {
         return Collections.unmodifiableList(list);
     }
 }
