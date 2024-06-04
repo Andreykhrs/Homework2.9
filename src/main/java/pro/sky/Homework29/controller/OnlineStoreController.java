@@ -4,7 +4,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-import pro.sky.Homework29.model.OnlineStore;
 import pro.sky.Homework29.service.OnlineStoreService;
 
 import java.util.List;
@@ -24,8 +23,8 @@ public class OnlineStoreController {
     }
 
     @GetMapping("/get")
-    public List<OnlineStore> getId() {
-        return onlineStoreService.getId();
+    public List<Integer> get() {
+        return onlineStoreService.getIds();
     }
 
 }

@@ -6,7 +6,6 @@ import pro.sky.Homework29.exception.OnlineStoreException;
 import pro.sky.Homework29.model.OnlineStore;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 
@@ -25,7 +24,7 @@ public class OnlineStoreService {
         return ID;
     }
 
-    public List<OnlineStore> getId() {
-        return Collections.unmodifiableList(list);
+    public List<Integer> getIds() {
+        return list.stream().map(OnlineStore::getID).toList();
     }
 }
