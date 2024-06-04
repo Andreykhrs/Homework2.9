@@ -23,8 +23,8 @@ public class OnlineStoreController {
     }
 
     @GetMapping("/get")
-    public List<Integer> get() {
-        return onlineStoreService.getIds();
+    public List getId() {
+        return onlineStoreService.getId();
     }
 
 }

@@ -7,6 +7,7 @@ import pro.sky.Homework29.model.OnlineStore;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 
 @Service
@@ -24,7 +25,9 @@ public class OnlineStoreService {
         return ID;
     }
 
-    public List<Integer> getIds() {
-        return list.stream().map(OnlineStore::getID).toList();
+    public List getId() {
+        return list.stream()
+                .map(OnlineStore::getID)
+                .collect(Collectors.toList());
     }
 }
